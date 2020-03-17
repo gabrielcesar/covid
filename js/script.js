@@ -12,38 +12,21 @@ google.charts.load('current', {
 });
 google.charts.setOnLoadCallback(drawRegionsMap);
 
-countries = [
-    "Thailand", "Japan", "Singapore", "Nepal", "Malaysia", "Canada", "Australia", "Cambodia", "Sri Lanka", "Germany", "Finland", 
-    "United Arab Emirates", "Philippines", "India", "Italy", "Sweden", "Spain", "Belgium", "Egypt", "Lebanon", "Iraq", "Oman", 
-    "Afghanistan", "Bahrain", "Kuwait", "Algeria", "Croatia", "Switzerland", "Austria", "Israel", "Pakistan", "Brazil", "Georgia", 
-    "Greece", "North Macedonia", "Norway", "Romania", "Estonia", "Netherlands", "San Marino", "Belarus", "Iceland", "Lithuania", 
-    "Mexico", "New Zealand", "Nigeria", "Ireland", "Luxembourg", "Monaco", "Qatar", "Ecuador", "Azerbaijan", "Armenia", 
-    "Dominican Republic", "Indonesia", "Portugal", "Andorra", "Latvia", "Morocco", "Saudi Arabia", "Senegal", "Argentina", "Chile", 
-    "Jordan", "Ukraine", "Hungary", "Liechtenstein", "Poland", "Tunisia", "Bosnia and Herzegovina", "Slovenia", "South Africa", 
-    "Bhutan", "Cameroon", "Colombia", "Costa Rica", "Peru", "Serbia", "Slovakia", "Togo", "Malta", "Martinique", "Bulgaria", 
-    "Maldives", "Bangladesh", "Paraguay", "Albania", "Cyprus", "Brunei", "US", "Burkina Faso", "Holy See", "Mongolia", "Panama", 
-    "China", "Iran", "Korea, South", "France", "Cruise Ship", "Denmark", "Czechia", "Taiwan*", "Vietnam", "Russia", "Moldova", 
-    "Bolivia", "Honduras", "United Kingdom", "Congo (Kinshasa)", "Cote d'Ivoire", "Jamaica", "Reunion", "Turkey", "Cuba", "Guyana", 
-    "Kazakhstan", "Cayman Islands", "Guadeloupe", "Ethiopia", "Sudan", "Guinea", "Aruba", "Kenya", "Antigua and Barbuda", "Uruguay", 
-    "Ghana", "Jersey", "Namibia", "Seychelles", "Trinidad and Tobago", "Venezuela", "Curacao", "Eswatini", "Gabon", "Guatemala", 
-    "Guernsey", "Mauritania", "Rwanda", "Saint Lucia", "Saint Vincent and the Grenadines", "Suriname", "occupied Palestinian territory", 
-    "Kosovo", "Central African Republic", "Congo (Brazzaville)", "Equatorial Guinea", "Uzbekistan", 
-]
-
 var fetched_data  = [
     ['Country', 'Confirmed', 'Deaths'],
 ]
 
-fetch("https://pomber.github.io/covid19/timeseries.json")
+fetch("https://corona.lmao.ninja/countries")
     .then(response => response.json())
     .then(data => {
-        for (var country = 0; country < countries.length; country ++)
+        for (var country = 0; country < data.length; country ++)
         {
-            fetched_data.push([
-                countries[country], 
-                data[countries[country]][data[countries[country]].length - 1]['confirmed'], 
-                data[countries[country]][data[countries[country]].length - 1]['deaths'], 
-            ])
+            if (data[country]['country'] == 'USA')
+                fetched_data.push([ 'US', data[country]['cases'], data[country]['deaths'] ])
+            else if (data[country]['country'] == 'UK')
+                fetched_data.push([ 'United Kingdom', data[country]['cases'], data[country]['deaths'] ])
+            else
+                fetched_data.push([ data[country]['country'], data[country]['cases'], data[country]['deaths'] ])
         }
     })
 
