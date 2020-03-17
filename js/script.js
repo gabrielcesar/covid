@@ -28,6 +28,9 @@ fetch("https://corona.lmao.ninja/countries")
             else
                 fetched_data.push([ data[country]['country'], data[country]['cases'], data[country]['deaths'] ])
         }
+
+
+
     })
 
 function drawRegionsMap() 
@@ -43,8 +46,11 @@ function drawRegionsMap()
     };
 
     var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
     chart.draw(data, options);
 }
+
+google.charts.setOnLoadCallback(drawRegionsMap);
 
 function open_modal(status)
 {
