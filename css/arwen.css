@@ -1,0 +1,128 @@
+/*
+ * 20200317
+ * Gabriel Cesar
+ * gabrielcesar2@gmail.com
+ */
+
+*
+{
+    -webkit-font-smoothing: antialiased;
+    color: #eee;
+    font-family: 'Sen', sans-serif;
+    font-size: 11px;
+    font-stretch: normal;
+    text-rendering: optimizeLegibility;
+}
+
+body
+{
+    margin: 0;
+    overflow: hidden;
+}
+
+div.google-visualization-tooltip 
+{ 
+    background-color: #bbb; 
+    border-color: #888; 
+    border-left: 16px solid #888; 
+    box-shadow: none;
+    height: 90px;
+    opacity: .9;
+    text-transform: uppercase;
+    width: 180px;
+}
+
+pre
+{
+    font-family: monospace;
+    font-size: 13px;
+}
+
+.arwen_about
+{
+    border: 1px solid #eee;
+    border-radius: 50%;
+    color: #eee;
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+    height: 38px;
+    line-height: 38px;
+    position: relative;
+    margin-top: -19px;
+    margin-right: 16px;
+    text-align: center;
+    top: 50%;
+    width: 38px;
+}
+
+.arwen_about:hover
+{
+    border-color: orange;
+    color: orange;
+}
+
+.arwen_close
+{
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.arwen_close:hover
+{
+    color: orange;
+}
+
+.arwen_modal_set
+{
+    background-color: black;
+    display: none;
+    height: 100%;
+    opacity: 0.7;
+    width: 100%;
+}
+
+.arwen_main
+{
+    background-color: #444;
+    box-sizing: border-box;
+    height: calc(100% - 60px);
+    left: 0;
+    position: absolute; 
+	overflow: auto;
+	top: 60px;
+    width: 100%;
+}
+
+.arwen_modal
+{
+    background-color: #555;
+    border: 1px solid #333;
+    display: none;
+    height: 504px;
+    left: 50%;
+    line-height: 200%;
+    margin-left: -160px;
+    margin-top: -284px;
+    padding: 32px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 256px;
+}
+
+.arwen_navbar
+{
+    background-color: #555;
+    border-bottom: 1px solid #333;
+    border-top: 1px solid #777;
+    box-sizing: border-box;
+    font-family: 'Sen', sans-serif;
+    font-size: 21px;
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+    text-align: center;
+    width: auto;
+}
+
