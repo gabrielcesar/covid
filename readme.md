@@ -3,6 +3,9 @@
 Corona Virus - Covid 19 around the world.  
 This chart displays confirmed and deaths status.
 
+![COVID](https://raw.githubusercontent.com/gabrielcesar/covid/master/images/covid.png)
+[gabrielcesar.github.io/covid/](https://gabrielcesar.github.io/covid/)
+
 ## Development by
 Gabriel Cesar  
 [github.com/gabrielcesar](https://github.com/gabrielcesar)  
