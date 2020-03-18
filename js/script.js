@@ -14,29 +14,31 @@ google.charts.setOnLoadCallback(drawRegionsMap);
 
 var fetched_data  = [
     ['Country', 'Confirmed', 'Deaths'],
+    ['', 0, 0],
 ]
 
 fetch("https://corona.lmao.ninja/countries")
     .then(response => response.json())
-    .then(data => {
+    .then(function(data)
+    {
         for (var country = 0; country < data.length; country ++)
         {
             if (data[country]['country'] == 'USA')
+            {
                 fetched_data.push([ 'US', data[country]['cases'], data[country]['deaths'] ])
+            }
             else if (data[country]['country'] == 'UK')
                 fetched_data.push([ 'United Kingdom', data[country]['cases'], data[country]['deaths'] ])
             else
                 fetched_data.push([ data[country]['country'], data[country]['cases'], data[country]['deaths'] ])
         }
 
-
-
+        console.log(data)
     })
 
 function drawRegionsMap() 
 {
     var data = google.visualization.arrayToDataTable(fetched_data);
-
     var options = {
         colorAxis: {colors: ['lightskyblue', 'yellow', '#ff9595']},
         backgroundColor: 'transparent',
@@ -44,7 +46,6 @@ function drawRegionsMap()
         defaultColor: '#f5f5f5',
         tooltip: {isHtml: true}
     };
-
     var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
 
     chart.draw(data, options);
