@@ -1,11 +1,13 @@
 <html>
 <head>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/biohazard.png">
     <link rel="stylesheet" href="css/arwen.css">
     <meta charset="utf-8">
     <meta name="author" content="Gabriel Cesar">
-    <meta name="description" content="Corona Virus COVID-19">
-    <meta name="keywords" content="Corona, Virus, COVID-19">
+    <meta name="description" content="Corona Virus - Covid 19 around the world. This chart displays confirmed and deaths status.">
+    <meta name="keywords" content="Corona, Virus, COVID-19, covid">
+    <meta name="viewport" content="width=device-width">
 
     <meta property="og:type" content="non_profit">
     <meta property="og:url" content="https://gabrielcesar.github.io/covid/">
@@ -19,16 +21,46 @@
     <meta property="twitter:description" content="Corona Virus - Covid 19 around the world. This chart displays confirmed and deaths status.">
     <meta property="twitter:image" content="https://raw.githubusercontent.com/gabrielcesar/covid-br/master/images/covid.png">
 
+    <script type="text/javascript" src="js/chart_evolution.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
     <title>Corona Virus - COVID-19</title>
 </head>
 <body>
-    <div class="arwen_navbar">
-        <span class="arwen_color_darkred">Corona</span> Virus &bull; Covid-19
-        <div class="arwen_about" onclick="location.href='https://github.com/gabrielcesar/covid/'">About</div>
-    </div>
-    <div id="regions_div" class="arwen_main"></div>
+<div class="arwen_navbar">
+    <span class="arwen_color_darkred">Corona</span> Virus &bull; Covid-19
+    <div class="arwen_about" onclick="location.href='https://github.com/gabrielcesar/covid/'">About</div>
+</div>
+
+<div id="regions_div" class="arwen_main"></div>
+
+<div id="" class="arwen_box_left_confirmed">
+    Cases<br>
+    <span class="arwen_color_orange arwen_font_size_30" id="box_total_confirmed"></span>
+</div>
+<div id="" class="arwen_box_left_death">
+    Deaths<br>
+    <span class="arwen_color_red arwen_font_size_30" id="box_total_death"></span>
+</div>
+
+<div id="arwen_menu" class="arwen_menu"></div>
+
+<div id="arwen_chart_evolution_set" class="arwen_chart_set">
+    <div id="arwen_chart_evolution_label" class="arwen_chart_label">Select a Country</div>
+    <div id="arwen_chart_evolution" class="arwen_chart_evolution"></div>
+</div>
+
+<div class="arwen_share">
+    <div class="arwen_share_label">Compartilhe</div>
+    <div
+        class="arwen_share_button arwen_share_facebook"
+        onclick="location.href='https://www.facebook.com/sharer/sharer.php?u=https://gabrielcesar.github.io/covid/'"
+    ></div>
+    <div
+        class="arwen_share_button arwen_share_twitter"
+        onclick="location.href='https://twitter.com/intent/tweet?text=Corona%20Virus%20World Map%20-%20https://gabrielcesar.github.io/covid/'"
+    ></div>
+</div>
+
 </body>
 </html>
-

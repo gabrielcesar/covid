@@ -21,14 +21,65 @@ body
 
 div.google-visualization-tooltip 
 { 
-    background-color: #bbb; 
-    border-color: #888; 
-    border-left: 16px solid #888; 
+    background-color: #555;
+    border: 1px solid #444;
+    border-left: 16px solid #444;
     box-shadow: none;
-    height: 90px;
-    opacity: .9;
+    height: 72px;
+    left: 0;
+    opacity: .95;
+    padding-top: 8px;
+    padding-left: 8px;
+    position: absolute;
     text-transform: uppercase;
-    width: 180px;
+    top: 0;
+    width: 192px;
+    z-index: 2;
+}
+
+div.google-visualization-tooltip:after
+{ 
+    background-color: #ccc;
+    background-position: 50% 50%;
+    background-size: 100% auto;
+    content: "";
+    height: 88px;
+    left: -15px;
+    position: absolute;
+    top: 0;
+    width: 14px;
+}
+
+div.google-visualization-tooltip > ul > li
+{
+    line-height: 50% !important;
+}
+
+div.google-visualization-tooltip > ul > li > span 
+{
+    color: #999 !important;
+    font-family: 'Roboto Condensed', sans-serif !important;
+    line-height: 50% !important;
+}
+
+::-webkit-scrollbar
+{
+    -webkit-background-color: #333;
+    background-color: #333;
+}
+
+::-webkit-scrollbar-thumb
+{
+    -webkit-background-color: #444;
+    background-color: #444;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    width: 8px;
+    -webkit-width: 8px;
+    background-clip: padding-box;
+    border: 3px solid transparent;
+    -webkit-opacity: 0.5;
+    opacity: 0.5;
 }
 
 .arwen_about
@@ -52,42 +103,64 @@ div.google-visualization-tooltip
     color: #87cefa;
 }
 
-.arwen_modal_set
+.arwen_amount
 {
-    background-color: black;
-    display: none;
+    float: right;
     height: 100%;
-    opacity: 0.7;
-    width: 100%;
+    line-height: 38px;
+    margin-right: 8px;
+    position: relative;
+    text-align: right;
+    top: 0;
+    width: 38px;
+}
+
+.arwen_box_left_confirmed
+{
+    background-color: #404040;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+	box-sizing: border-box;
+    color: #999;
+	height: 120px;
+	left: 0;
+    padding-top: 34px;
+	position: absolute;
+    overflow-y: auto;
+    text-align: center;
+    text-transform: uppercase;
+	top: 60px;
+	width: 128px;
+}
+
+.arwen_box_left_death
+{
+    background-color: #404040;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+	box-sizing: border-box;
+    color: #999;
+	height: 120px;
+	left: 128px;
+    padding-top: 34px;
+	position: absolute;
+    overflow-y: auto;
+    text-align: center;
+    text-transform: uppercase;
+	top: 60px;
+	width: 128px;
 }
 
 .arwen_main
 {
-    background-color: #444;
+    background-color: #353535;
     box-sizing: border-box;
     height: calc(100% - 60px);
-    left: 0;
+    left: 256px;
     position: absolute; 
 	overflow: auto;
 	top: 60px;
-    width: 100%;
-}
-
-.arwen_modal
-{
-    background-color: #555;
-    border: 1px solid #333;
-    display: none;
-    height: 504px;
-    left: 50%;
-    line-height: 200%;
-    margin-left: -160px;
-    margin-top: -284px;
-    padding: 32px;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    width: 256px;
+    width: calc(100% - 256px);
 }
 
 .arwen_navbar
@@ -109,6 +182,218 @@ div.google-visualization-tooltip
     width: auto;
 }
 
+.arwen_icon
+{
+    background-color: #ccc;
+    background-size: auto 100%;
+    background-position: 50% 50%;
+    box-sizing: border-box;
+    border-radius: 50%;
+    height: 16px;
+    float: left;
+    position: relative;
+    margin-left: 16px;
+    margin-right: 10px;
+    margin-top: -8px;
+    top: 50%;
+    width: 16px;
+}
+
+.arwen_item
+{
+    background-color: #444;
+    border-bottom: 1px solid #333;
+    box-sizing: border-box;
+    color: #999;
+    cursor: default;
+    height: 42px;
+    line-height: 42px;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.arwen_item:hover { background-color: #333; }
+
+.arwen_item_label
+{
+    color: #999;
+    float: left;
+    height: 100%;
+    line-height: 38px;
+    position: relative;
+    top: 0;
+    width: calc(100% - 134px);
+}
+
+.arwen_menu
+{
+    background-color: #555;
+    border-right: 1px solid #333;
+    box-sizing: border-box;
+    height: calc(100% - 180px);
+    left: 0;
+    position: absolute;
+    overflow-y: auto;
+    top: 180px;
+    width: 256px;
+}
+
+.arwen_chart_set
+{
+    background-color: #272822;
+    color: #666;
+    position: absolute;
+    height: calc(24px + 142px);
+    width: 256px;
+    bottom: 42px;
+    left: 272px;
+    z-index: 1;
+}
+
+.arwen_chart_label
+{
+    color: #777;
+    background-color: #343530;
+    font-size: 11px;
+    float: left;
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.arwen_chart_evolution
+{
+    position: relative;
+    float: left;
+    height: 140px;
+    width: 220px;
+}
+
+.arwen_share { display: none; }
+
+.arwen_share_button
+{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 70% ;
+    float: left;
+    height: 35px;
+    position: absolute;
+    top: 15px;
+    width: 32px;
+}
+
+.arwen_share_facebook
+{
+    background-image: url('../images/facebook.svg');
+    left: calc(50% - 40px);
+}
+
+.arwen_share_twitter
+{
+    background-image: url('../images/twitter.svg');
+    left: calc(50% + 8px);
+}
+
+.arwen_share_label
+{
+    color: #777;
+    font-size: 11px;
+    float: left;
+    height: 15px;
+    line-height: 15px;
+    position: relative;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 1024px)
+{
+    body
+    {
+        background-color: 272822;
+        overflow: auto;
+    }
+
+    .arwen_main
+    {
+        left: 0;
+        top: 0;
+        position: relative;
+        width: 100%;
+        height: 50%;
+    }
+
+    .arwen_box_left_confirmed
+    {
+        float: left;
+        position: relative;
+        left: 0;
+        width: 50%;
+        top: 0;
+    }
+
+    .arwen_box_left_death
+    {
+        float: left;
+        position: relative;
+        left: 0;
+        width: 50%;
+        top: 0;
+    }
+
+    .arwen_menu
+    {
+        border-right: 0;
+        float: left;
+        height: 50%;
+        position: relative;
+        width: 100%;
+        top: 0;
+    }
+
+    .arwen_share
+    {
+        background-color: #444;
+        border-top: 1px solid #333;
+        display: block;
+        float: left;
+        height: 50px;
+        left: 0;
+        line-height: 50px;
+        margin: 0;
+        position: relative;
+        text-align: center;
+        text-transform: uppercase;
+        top: 0;
+        width: 100%;
+    }
+
+    .arwen_chart_set
+    {
+        position: relative;
+        float: left;
+        height: auto;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .arwen_chart_evolution
+    {
+        width: 100%;
+    }
+}
+
+.arwen_confirmed { color: orange; }
+.arwen_death { color: #ff9797; }
+
 .arwen_color_999 { color: #999; }
 .arwen_color_darkred { color: #ff0000; }
 .arwen_color_green { color: lightgreen; }
@@ -117,6 +402,7 @@ div.google-visualization-tooltip
 .arwen_color_yellow { color: yellow; }
 .arwen_font_size_10 { font-size: 10px; }
 .arwen_font_size_11 { font-size: 11px; }
+.arwen_font_size_30 { font-size: 30px; }
 .arwen_font_size_50 { font-size: 50px; }
 .arwen_font_size_64 { font-size: 64px; }
 
