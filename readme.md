@@ -31,6 +31,5 @@ A [Post](https://www.facebook.com/groups/pythonbr/permalink/1155345034797234/) b
 [gabrielcesar.github.io/covid-br/](https://gabrielcesar.github.io/covid-br/)
 
 ## Buy me a coffee
-![Buy me a coffee](https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg)
-[Buy me a coffee - https://www.buymeacoffee.com/gabrielcesar](https://www.buymeacoffee.com/gabrielcesar)
-
+[![Buy me a coffee](https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg)](https://www.buymeacoffee.com/gabrielcesar)  
+[buymeacoffee.com/gabrielcesar](https://www.buymeacoffee.com/gabrielcesar)
