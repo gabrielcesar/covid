@@ -26,12 +26,14 @@ chart_evolution_label = (date, confirmed, death) => {
 
 function chart_evolution_plot (country) 
 {
-    country_name = country.toLowerCase()
+    country_name = country
     data = historical
 
-    if (country_name == 'us')
-        country_name = 'usa'
-    else if (country_name == 'united kingdom')
+    console.log(country_name)
+
+    if (country_name == 'US')
+        country_name = 'USA'
+    else if (country_name == 'United Kingdom')
         country_name = 'uk'
 
     for (let country in data)
