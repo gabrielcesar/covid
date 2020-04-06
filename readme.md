@@ -4,11 +4,12 @@ Corona Virus - Covid 19 around the world.
 This chart displays confirmed and deaths status.
 
 ![COVID](https://raw.githubusercontent.com/gabrielcesar/covid/master/images/covid.png)
-[gabrielcesar.github.io/covid/](https://gabrielcesar.github.io/covid/)
+[gabrielcesar.github.io/covid](https://gabrielcesar.github.io/covid/)
 
 ## Development by
 Gabriel Cesar  
 [github.com/gabrielcesar](https://github.com/gabrielcesar)  
+[linkedin.com/in/gabrielcesar1](https://www.linkedin.com/in/gabrielcesar1/)  
 
 ## Data API
 
@@ -28,8 +29,8 @@ A [Post](https://www.facebook.com/groups/pythonbr/permalink/1155345034797234/) b
 ## Please also visit
 ### COVID - Brazil
 ![COVID](https://raw.githubusercontent.com/gabrielcesar/covid-br/master/images/covid.png)
-[gabrielcesar.github.io/covid-br/](https://gabrielcesar.github.io/covid-br/)
+[gabrielcesar.github.io/covid-br](https://gabrielcesar.github.io/covid-br/)
 
 ## Buy me a coffee
 [![Buy me a coffee](https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg)](https://www.buymeacoffee.com/gabrielcesar)  
-[buymeacoffee.com/gabrielcesar](https://www.buymeacoffee.com/gabrielcesar)
+[buymeacoff.ee/gabrielcesar](https://www.buymeacoffee.com/gabrielcesar)
