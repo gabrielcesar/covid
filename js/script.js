@@ -117,7 +117,7 @@ var google_chart_data  = [
 var total_confirmed = 0
 var total_death = 0
 
-fetch("https://corona.lmao.ninja/countries")
+fetch("https://corona.lmao.ninja/v2/countries")
     .then(response => response.json())
     .then(function(data)
     {
