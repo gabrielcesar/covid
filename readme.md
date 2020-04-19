@@ -31,9 +31,9 @@ The easiest way is by using ```<iframe>```. e.g.
 
 ```
 <iframe 
-        src="https://gabrielcesar.github.io/covid"
-        style="border: 0; width: 100%; height: 512px">
-</iframe>
+    src="https://gabrielcesar.github.io/covid"
+    style="border: 0; width: 100%; height: 512px;"
+></iframe>
 ```
 
 ## Please also visit
