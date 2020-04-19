@@ -26,6 +26,16 @@ Gabriel Cesar
 ## Inspired by
 A [Post](https://www.facebook.com/groups/pythonbr/permalink/1155345034797234/) by [Paluch Guilherme](https://github.com/gorpo) in [Python Brazil Group](https://www.facebook.com/groups/pythonbr/) in Facebook.
 
+## How to integrate with my Site/App?
+The easiest way is by using ```<iframe>```. e.g.
+
+```
+<iframe 
+        src="https://gabrielcesar.github.io/covid"
+        style="border: 0; width: 100%; height: 512px">
+</iframe>
+```
+
 ## Please also visit
 ### COVID - Brazil
 ![COVID](https://raw.githubusercontent.com/gabrielcesar/covid-br/master/images/covid.png)
