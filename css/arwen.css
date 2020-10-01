@@ -19,8 +19,8 @@ body
     overflow: hidden;
 }
 
-div.google-visualization-tooltip 
-{ 
+div.google-visualization-tooltip
+{
     background-color: #555;
     border: 1px solid #444;
     border-left: 16px solid #444;
@@ -33,12 +33,12 @@ div.google-visualization-tooltip
     position: absolute;
     text-transform: uppercase;
     top: 0;
-    width: 192px;
+    width: auto;
     z-index: 2;
 }
 
 div.google-visualization-tooltip:after
-{ 
+{
     background-color: #ccc;
     background-position: 50% 50%;
     background-size: 100% auto;
@@ -55,7 +55,21 @@ div.google-visualization-tooltip > ul > li
     line-height: 50% !important;
 }
 
-div.google-visualization-tooltip > ul > li > span 
+div.google-visualization-tooltip > ul > li:first-child span {
+	font-weight: bold;
+	color: #fff !important;
+	font-size: 16px !important;
+}
+
+div.google-visualization-tooltip > ul > li:nth-child(2n) span:last-child {
+	color: #ddd !important;
+}
+
+div.google-visualization-tooltip > ul > li:nth-child(3n) span:last-child {
+	color: #ddd !important;
+}
+
+div.google-visualization-tooltip > ul > li > span
 {
     color: #999 !important;
     font-family: 'Roboto Condensed', sans-serif !important;
@@ -112,7 +126,7 @@ div.google-visualization-tooltip > ul > li > span
     position: relative;
     text-align: right;
     top: 0;
-    width: 38px;
+    width: 40px;
 }
 
 .arwen_box_left_confirmed
@@ -122,15 +136,15 @@ div.google-visualization-tooltip > ul > li > span
     border-bottom: 1px solid #333;
 	box-sizing: border-box;
     color: #999;
-	height: 120px;
+	height: 80px;
 	left: 0;
-    padding-top: 34px;
+    padding-top: 15px;
 	position: absolute;
     overflow-y: auto;
     text-align: center;
     text-transform: uppercase;
 	top: 60px;
-	width: 128px;
+	width: 256px;
 }
 
 .arwen_box_left_death
@@ -140,15 +154,15 @@ div.google-visualization-tooltip > ul > li > span
     border-bottom: 1px solid #333;
 	box-sizing: border-box;
     color: #999;
-	height: 120px;
-	left: 128px;
-    padding-top: 34px;
+	height: 80px;
+	left: 0px;
+    padding-top: 15px;
 	position: absolute;
     overflow-y: auto;
     text-align: center;
     text-transform: uppercase;
-	top: 60px;
-	width: 128px;
+	top: 140px;
+	width: 256px;
 }
 
 .arwen_main
@@ -157,7 +171,7 @@ div.google-visualization-tooltip > ul > li > span
     box-sizing: border-box;
     height: calc(100% - 60px);
     left: 256px;
-    position: absolute; 
+    position: absolute;
 	overflow: auto;
 	top: 60px;
     width: calc(100% - 256px);
@@ -225,7 +239,7 @@ div.google-visualization-tooltip > ul > li > span
     line-height: 38px;
     position: relative;
     top: 0;
-    width: calc(100% - 134px);
+    width: calc(100% - 140px);
 }
 
 .arwen_menu
@@ -237,7 +251,7 @@ div.google-visualization-tooltip > ul > li > span
     left: 0;
     position: absolute;
     overflow-y: auto;
-    top: 180px;
+    top: 220px;
     width: 256px;
 }
 
@@ -405,4 +419,3 @@ div.google-visualization-tooltip > ul > li > span
 .arwen_font_size_30 { font-size: 30px; }
 .arwen_font_size_50 { font-size: 50px; }
 .arwen_font_size_64 { font-size: 64px; }
-
