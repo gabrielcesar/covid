@@ -4,6 +4,11 @@
  * gabrielcesar2@gmail.com
  */
 
+
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
 google.charts.load('current', {
     'packages':['geochart'],
     // Note: you will need to get a mapsApiKey for your project.
@@ -132,14 +137,13 @@ fetch("https://corona.lmao.ninja/v2/countries")
             else
                 google_chart_data.push([ data[country]['country'], data[country]['cases'], data[country]['deaths'] ])
 
-            document.getElementById('arwen_menu').innerHTML += '<div class=\'arwen_item\' onclick="chart_evolution_plot(\'' + data[country]['country'] + '\')"><div class=\'arwen_icon\' style=\'background-image: url("' + data[country]['countryInfo']['flag'] + '");\'></div><div class=\'arwen_item_label\'>' + data[country]['country'] + '</div><div class=\'arwen_amount arwen_death\'>' + data[country]['deaths'] + '</div><div class=\'arwen_amount arwen_confirmed\'>' + data[country]['cases'] + '</div></div>'
+            document.getElementById('arwen_menu').innerHTML += '<div class=\'arwen_item\' onclick="chart_evolution_plot(\'' + data[country]['country'] + '\')"><div class=\'arwen_icon\' style=\'background-image: url("' + data[country]['countryInfo']['flag'] + '");\'></div><div class=\'arwen_item_label\'>' + data[country]['country'] + '</div><div class=\'arwen_amount arwen_death\'>' + numberWithCommas(data[country]['deaths']) + '</div><div class=\'arwen_amount arwen_confirmed\'>' + numberWithCommas(data[country]['cases']) + '</div></div>'
 
             total_confirmed += data[country]['cases']
             total_death += data[country]['deaths']
         }
-
-        document.getElementById('box_total_confirmed').innerHTML = total_confirmed
-        document.getElementById('box_total_death').innerHTML = total_death
+        document.getElementById('box_total_confirmed').innerHTML = numberWithCommas(total_confirmed)
+        document.getElementById('box_total_death').innerHTML = numberWithCommas(total_death)
 
         google.charts.setOnLoadCallback(drawRegionsMap);
     })
